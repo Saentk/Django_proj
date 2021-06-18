@@ -1,0 +1,33 @@
+{% extends 'polls\base.html' %}
+{% block title %} Main Page {% endblock %}
+{% block content %}
+<header>
+<h1> <p align="center" id="Title"> Сайт вчителя початкових классів Токарєвої Марини Анатоліївни  </p> </h1>
+<p> Україна,Донецька область, Маріуполь </p> 
+<p> <a href="https://zosh67.wixsite.com/zosh67"> ЗОШ №67 </a> </p>
+</header>
+
+
+<aside>
+<div id="sideinfo"> 
+<h2 align="center" id="inform"> Інформація для учнів </h2>
+
+{% if latest_info_list %}
+    <ul>
+    {% for info in latest_info_list %}
+        <li><a align ='center' href="{% url 'polls:info_detail' info.id %}">{{ info.info_title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+</aside>
+
+<div id="MainInfo">
+Вчительниця початкових класів Токарєва Марина Анатоліївна
+Закінчила інститут найкращих педагогів світу з червоним дипломом.
+До школи працювала в дитячому садочку вихователькою. Прикладами вдалої праці Марини Анатоліївни 
+є Біл Гейтс (засновник корпорації Майкрософт) , 
+Стів Джобс (американський підприємець і винахідник) та Барак Обама 
+(американський політик, 44-ий президент США). </div>
+{% endblock %}

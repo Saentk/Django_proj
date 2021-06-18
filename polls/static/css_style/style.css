@@ -1,0 +1,96 @@
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 48px;
+    text-decoration: none;
+}
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+img {
+    float: left;
+    border: 2px solid;
+    border-radius: 5px;
+    cursor:pointer;
+    margin: 5px;
+}
+body {
+    margin-left:150px;
+    margin-right:150px;
+    background-color: #7d84b8;
+    background-size: 100%;
+}
+header {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+a {
+    color: #a62135;
+    font-size:25px;
+}
+a:hover {
+    background: green;
+    color: #ffe; 
+}
+
+/* main_page */
+#MainInfo {
+    font-size: 25px;
+    background: #ccc;
+    padding: 5px;
+    border: solid 1px black; 
+    width: 55%;
+}
+h2 {
+    color: black;
+    background-color: #d10f29;
+    opacity: 0.8;
+    padding: 10px;
+}
+#sideinfo {
+    border: 2px solid;
+    border-radius: 15px;
+    width: 400px;
+    float:right;
+}
+#Title {
+    font-size:30px;
+}
+p {
+    color:white;
+    font-size: 20px
+}
+
+/* Завдання */
+.zadaniya {
+    font-size: 30px;
+    color: black;
+}
+
+/* Фотографії класу */
+.images {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/* Найкращі роботи */
+.images_2 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.BestWork {
+    width: 49%;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 15px;
+}

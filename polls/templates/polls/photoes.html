@@ -1,0 +1,18 @@
+{% extends 'polls\base.html' %}
+{% block title %} Фотогалерея {% endblock %}
+{% block content %} 
+<div class="images">
+
+{% if latest_photoes %}
+
+	{% for a in latest_photoes %}
+		{% csrf_token %}
+		<a href="{{a.image.url}}"><img src="{{a.image.url}}" height = '140px'/></a>
+	{% endfor %}
+
+{% else %}
+	Don`t see any photo
+{% endif %}	
+
+</div>
+{% endblock %}

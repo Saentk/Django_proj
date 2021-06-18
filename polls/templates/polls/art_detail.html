@@ -1,0 +1,20 @@
+{% extends 'polls\base.html' %}
+{% block title %} Details {% endblock %}
+{% block content %}
+
+
+<h1>{{article.article_title}}</h1>
+<p>{{article.article_text}}</p>
+
+<ul>
+{% for subj in subject.subject_set.all %}
+    <p>{{ subj.title }} </p>
+    <p> {{subj.text}} </p>
+    {% if subj.image %}
+    	<a href="{{subj.image.url}}"><img src="{{subj.image.url}}" height = '150px'/></a>
+    {% endif %}
+<hr>
+{% endfor %}
+</ul>
+
+{% endblock %} 

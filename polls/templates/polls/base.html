@@ -1,0 +1,26 @@
+{% load static %}
+<!doctype html>
+<html> 
+<head>
+<title>{% block title %} {% endblock %}</title>
+<meta charset="utf-8"/>
+<link rel="stylesheet"  href="{% static 'css_style/style.css' %}">
+</head>
+
+<body>
+<div class="navbar">
+  <a href="{% url 'polls:Main_page' %}">Головна</a>
+  <a href="{% url 'polls:Photo' %}">Фотогалерея</a>
+  <a href="{% url 'polls:Best' %}">Наші досягнення</a>
+  <a href="{% url 'polls:Exercize' %}">Завдання</a>
+  <a href="{% url 'polls:Info' %}">Інформація для батьків</a>
+</div>
+
+<div>
+	{% block content %} {% endblock %}
+</div>
+
+</body>
+</html> 
+
+

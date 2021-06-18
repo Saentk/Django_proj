@@ -1,0 +1,17 @@
+{% extends 'polls\base.html' %}
+{% block title %} Your education {% endblock %}
+{% block content %} 
+<div class="colums">
+{% if latest_articles_list %}
+
+	{% for a in latest_articles_list %}
+		<a class='zadaniya' href="{% url 'polls:art_detail' a.id %}">{{a.article_title}} </a>
+		<br>
+		<br>
+	{% endfor %}
+
+{% else %}
+	Don`t see any article
+{% endif %}	
+</div>
+{% endblock %}

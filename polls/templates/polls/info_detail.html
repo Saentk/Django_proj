@@ -1,0 +1,11 @@
+{% extends 'polls\base.html' %}
+{% block title %} Best Works {% endblock %}
+{% block content %} 
+
+<h2>{{info.info_title}}</h2>
+<p>{{info.info_text}}</p>
+{% if info.was_publ_resently %}
+	New information!
+{% endif %}
+<hr>
+{% endblock %} 

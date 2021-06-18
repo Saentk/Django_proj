@@ -1,0 +1,21 @@
+{% extends 'polls\base.html' %}
+{% block title %} Best Works {% endblock %}
+{% block content %} 
+
+
+<div class="images_2">
+{% if latest_works %}
+
+	{% for a in latest_works %}
+		{% csrf_token %}
+		<div class="BestWork">
+		<a class="image" href="{{a.image.url}}"><img src="{{a.image.url}}" height = '150px'/></a>
+		<div> {{ a.title }} </div>
+		</div>
+	{% endfor %}
+
+{% else %}
+	Don`t see any photo
+{% endif %}	
+</div>
+{% endblock %}
